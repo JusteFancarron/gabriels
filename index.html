@@ -1,19 +1,76 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Titre de la page</title>
-		<link href="src/css/output.css" rel="stylesheet">
-	</head>
-	<body cz-shortcut-listen="true">
-		<h1 class="test-3xl font-bold underline">Hello world</h1>
-		<p>Ceci est un paragraphe, contenant un lien hypertexte
-		<a href="https://www.google.com" target =" blanck">Page</a>
-		</p>
-		<div class="flex items-center justify-between p-4 bg-blue-500 text-white rounded-lg shadow-md">
-  		<h2 class="text-xl font-bold">Mon titre</h2>
-  		<button class="px-4 py-2 bg-white text-blue-500 rounded hover:bg-blue-100">Cliquez-moi</button>
-		</div>
-	</body>
+<html lang="fr" data-theme="dim">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Gabriel Soria</title>
+    <link href="src/css/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+    <script>
+        function checkContact() {
+            const studentStatus = document.getElementById('student-status').value;
+            const contactInfo = document.getElementById('contact-info');
+            
+            if (studentStatus === 'oui') {
+                contactInfo.innerHTML = `
+                    <div class="alert alert-success shadow-lg">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span>Email : <a href="mailto:gabriel.soria1337@gmail.com" class="text-primary">gabriel.soria1337@gmail.com</a></span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                contactInfo.innerHTML = `
+                    <div class="alert alert-error shadow-lg">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span>Désolé, vous ne pouvez pas me contacter actuellement.</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="card card-dash rounded-xs bg-base-100 shadow-xl">
+            <div class="card-body bg-primary text-primary-content p-6">
+                <h1 class="card-title text-4xl">Gabriel Soria</h1>
+                <p>Développeur & Ingénieur en Informatique</p>
+            </div>
+            
+            <div class="p-6">
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold text-secondary border-b-2 border-accent pb-2 mb-4">Présentation</h2>
+                    <p class="text-base-content leading-relaxed">
+                        Passionné de technologies et d'innovation, je suis un développeur polyvalent avec une forte capacité d'adaptation et un goût prononcé pour les solutions logicielles créatives. 
+                        Mon parcours académique et professionnel m'a permis de développer des compétences solides en développement web, en intelligence artificielle et en gestion de projets technologiques.
+                        Je recherche constamment à repousser mes limites et à apprendre de nouvelles technologies.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-secondary border-b-2 border-accent pb-2 mb-4">Formulaire de Contact</h2>
+                    <div class="form-control w-full max-w-xs">
+                        <label class="label">
+                            <span class="label-text">Êtes-vous étudiant à L'EPITA ?</span>
+                        </label>
+                        <select id="student-status" class="select select-bordered select-primary w-full max-w-xs" onchange="checkContact()">
+                            <option value="">Sélectionnez</option>
+                            <option value="oui">Oui</option>
+                            <option value="non">Non</option>
+                        </select>
+                    </div>
+                    
+                    <div id="contact-info" class="mt-4">
+                        <!-- Les informations de contact apparaîtront ici -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+
