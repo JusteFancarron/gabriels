@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice - DaisyUI</title>
+    <title>Zéphyr Reïka - Scientifique & Cyber</title>
     <link href="src/css/output.css" rel="stylesheet">
     <style>
         .calc-button {
@@ -17,93 +17,248 @@
         }
     </style>
 </head>
-<body>
-    <!-- Header de navigation centré -->
-    <header class="navbar bg-base-300 shadow-lg px-4">
-        <div class="navbar-start"></div>
+<body class="bg-base-100">
+    <header class="navbar bg-base-300 shadow-lg px-4 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="avatar">
+                <div class="w-12 rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Avatar" />
+                </div>
+            </div>
+        </div>
         <div class="navbar-center flex">
             <ul class="menu menu-horizontal px-1 flex justify-center gap-4">
                 <li><a href="index.html" class="btn btn-ghost normal-case">Accueil</a></li>
                 <li><a href="calculatrice.html" class="btn btn-ghost normal-case text-m">Calculatrice</a></li>
+                <li><a href="#experience" class="btn btn-ghost normal-case text-m">Expérience</a></li>
+                <li><a href="#competences" class="btn btn-ghost normal-case text-m">Compétences</a></li>
+                <li><a href="#projets" class="btn btn-ghost normal-case text-m">Projets</a></li>
             </ul>
         </div>
-        <div class="navbar-end"></div>
+        <div class="navbar-end">
+            <button class="btn btn-primary">Contact</button>
+        </div>
     </header>
-    </br><div class="flex justify-center items-center">
-	   <div class="card bg-info w-96 shadow-sm">
-	      <div class="card-body rounded bg-info text-center flex flex-col justify-center items-center">
-		 <h1 class="text-5xl font-bold">Calculatrice</h1>
-	      </div>
-	   </div>
-	</div>
-    <div class="container mx-auto p-4 max-w-md">
-        <div class="card bg-base-200 shadow-xl">
-            <div class="card-body">
-                <input type="text" id="display" class="input input-bordered calc-display w-full text-right" readonly>
-                
-                <div class="grid grid-cols-4 gap-2 mt-4">
-                    <button class="btn btn-outline calc-button" onclick="clearDisplay()">C</button>
-                    <button class="btn btn-outline calc-button" onclick="backspace()">⌫</button>
-                    <button class="btn btn-accent calc-button" onclick="addToDisplay('%')">%</button>
-                    <button class="btn btn-secondary calc-button" onclick="addToDisplay('/')">/</button>
-                    
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('7')">7</button>
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('8')">8</button>
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('9')">9</button>
-                    <button class="btn btn-secondary calc-button" onclick="addToDisplay('*')">×</button>
-                    
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('4')">4</button>
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('5')">5</button>
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('6')">6</button>
-                    <button class="btn btn-secondary calc-button" onclick="addToDisplay('-')">-</button>
-                    
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('1')">1</button>
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('2')">2</button>
-                    <button class="btn btn-primary calc-button" onclick="addToDisplay('3')">3</button>
-                    <button class="btn btn-secondary calc-button" onclick="addToDisplay('+')">+</button>
-                    
-                    <button class="btn btn-primary calc-button col-span-2" onclick="addToDisplay('0')">0</button>
-                    <button class="btn btn-info calc-button" onclick="addToDisplay('.')">.</button>
-                    <button class="btn btn-success calc-button" onclick="calculate()">=</button>
-                </div>
+
+    <div class="hero bg-base-200 h-80">
+        <div class="hero-content text-center">
+            <div class="max-w-lg">
+                <h1 class="text-6xl font-bold">Zéphyr Reïka</h1>
+                <p class="text-xl mt-4 mb-6">Scientifique & Expert en Cybersécurité</p>
+		<div class="flex gap-4 justify-center">
+    			<a href="placeholder.mp4" class="btn btn-primary">Télécharger CV</a>
+		</div>
             </div>
         </div>
     </div>
 
-	<footer class="footer sm:footer-horizontal footer-center bg-neutral text-neutral-content p-4">
-	  <aside>
-	    <p>Copyright © EPITA GS - Tous droits réservés.</p>
-	  </aside>
-	</footer>
+    <div class="container mx-auto py-16 px-4">
+        <div class="flex flex-col md:flex-row items-center gap-8 mb-24">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-4">Expertise Scientifique</h2>
+                <p class="text-lg mb-4">
+		Passioné des sciences techniques, je suis titulaire d'une licence en cybernétique. Travaillant d'abord dans divers laboratoires, j'ai eu l'opportunité géniale de travailler avec la Fondation SCP. Cette expérience m'a permis d'approfondir mes compétences et d'enrichir mon esprit d'équipe.
+                </p>
+                <p class="text-lg">
+		Mes recherches m'ont menés vers différents domaines, notamment l'informatique, avec laquelle je suis tombé amoureux. J'ai donc démissioné de mon poste malgré son statut prestigieux pour me tourner vers un doctorat de cryptographie et cybersécurité. 
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400" alt="Science Lab" class="rounded-lg shadow-xl w-full h-auto" />
+            </div>
+        </div>
 
-    <script>
-        function addToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
-        
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
-        
-        function backspace() {
-            let display = document.getElementById('display');
-            display.value = display.value.slice(0, -1);
-        }
-        
-        function calculate() {
-            let display = document.getElementById('display');
-            try {
-                // Sécuriser l'évaluation avec une expression régulière
-                let expression = display.value;
-                if (/^[0-9+\-*/.() %]+$/.test(expression)) {
-                    display.value = eval(expression);
-                } else {
-                    display.value = 'Erreur';
-                }
-            } catch (error) {
-                display.value = 'Erreur';
-            }
-        }
-    </script>
+        <!-- Deuxième bloc image + texte -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-24">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-4">Cryptographie quantique</h2>
+                <p class="text-lg mb-4">
+		Face aux défis de demain, il est vital de se préparer aux futures menaces liées à la destruction de la cryptographie telle que nous la connaissons. La puissance de calcul des ordinateurs quantiques surclassera celle de nos appareils actuels de manière inimaginable. Le cryptage RSA, par exemple, pourra être brisé en 0,5 secondes.
+                </p>
+                <p class="text-lg">
+		Grâce à mon doctorat du MIT en cryptographie appliquée quantique et cybersécurité, je suis prêt à affronter ces nouvelles menaces. Avec un esprit chercheur, je souhaite développer des systèmes robustes permettant de résister à tous les dangers à venir. Nous devons regarder vers le futur. œ
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400" alt="Cyber Security" class="rounded-lg shadow-xl w-full h-auto" />
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div id="experience" class="mb-24">
+            <h2 class="text-4xl font-bold mb-12 text-center">Parcours Professionnel</h2>
+            <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                <li>
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-start md:text-end mb-10">
+                        <time class="font-mono italic">2023-Présent</time>
+                        <div class="text-lg font-black">Chef de Projet Cybersécurité</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end mb-10">
+                        <time class="font-mono italic">2020-2023</time>
+                        <div class="text-lg font-black">Chercheur en IA Appliquée</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-start md:text-end mb-10">
+                        <time class="font-mono italic">2018-2020</time>
+                        <div class="text-lg font-black">Analyste en Sécurité Informatique</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    </div>
+                    <hr />
+                </li>
+                <li>
+                    <hr />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end mb-10">
+                        <time class="font-mono italic">2015-2018</time>
+                        <div class="text-lg font-black">Doctorat en Sciences Informatiques</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Collapse Menus -->
+        <div id="competences" class="mb-24">
+            <h2 class="text-4xl font-bold mb-12 text-center">Compétences et Expertises</h2>
+            <div class="space-y-4">
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="accordion-1" checked="checked" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Expertise Scientifique
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <div class="badge badge-primary">Recherche Appliquée</div>
+                            <div class="badge badge-primary">Analyse de Données</div>
+                            <div class="badge badge-primary">Modélisation</div>
+                            <div class="badge badge-primary">Publication Scientifique</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="accordion-1" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Cybersécurité
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <div class="badge badge-secondary">Audit de Sécurité</div>
+                            <div class="badge badge-secondary">Cryptographie</div>
+                            <div class="badge badge-secondary">Test d'Intrusion</div>
+                            <div class="badge badge-secondary">Sécurité Réseau</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="accordion-1" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Compétences Techniques
+                    </div>
+                    <div class="collapse-content"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <div class="badge badge-accent">Python</div>
+                            <div class="badge badge-accent">C/C++</div>
+                            <div class="badge badge-accent">Machine Learning</div>
+                            <div class="badge badge-accent">DevSecOps</div>
+                            <div class="badge badge-accent">Analyse de Vulnérabilités</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div id="projets" class="mb-24">
+            <h2 class="text-4xl font-bold mb-12 text-center">Projets Récents</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="https://placehold.co/400x250" alt="Projet 1" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Système de détection d'intrusion</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <a href="projet1.html" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="https://placehold.co/400x250" alt="Projet 2" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">IA pour l'analyse de risques</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <a href="projet2.html" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="https://placehold.co/400x250" alt="Projet 3" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Cryptographie quantique</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <a href="projet3.html" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+               
+    <footer class="footer footer-center p-10 bg-neutral text-neutral-content">
+        <div class="grid grid-flow-col gap-4">
+            <a href="placeholder.mp4" class="link link-hover">À propos</a>
+            <a href="placeholder.mp4" class="link link-hover">Contact</a>
+            <a href="placeholder.mp4" class="link link-hover">Mentions légales</a>
+            <a href="placeholder.mp4" class="link link-hover">Confidentialité</a>
+        </div> 
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+            </div>
+        </div> 
+        <div>
+            <p>Copyright © 2024 EPITA GS - Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
+
