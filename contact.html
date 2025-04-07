@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="lemonade">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Zéphyr Reïka</title>
+    <link href="src/css/output.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body class="bg-base-100">
+    <header class="navbar bg-base-300 shadow-lg px-4 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="avatar">
+                <div class="w-12 rounded-full">
+                    <img src="avatar.jpg" alt="Avatar"/>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-center flex">
+            <ul class="menu menu-horizontal px-1 flex justify-center gap-4">
+                <li><a href="index.html" class="btn btn-ghost normal-case">Accueil</a></li>
+                <li><a href="calculatrice.html" class="btn btn-ghost normal-case text-m">Calculatrice</a></li>
+                <li><a href="questionnaire.html" class="btn btn-ghost normal-case text-m">Questionnaire</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="contact.html" class="btn btn-primary">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mx-auto p-4 max-w-md">
+            <div class="card bg-base-200 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title text-center mx-auto mb-6">Contact</h2>
+                    
+                    <div id="contact-form">
+                        <div class="form-control w-full mb-4">
+                            <label class="label">
+                                <span class="label-text">Nom</span>
+                            </label>
+                            <input type="text" id="lastname" placeholder="Votre nom" class="input input-bordered w-full" />
+                        </div>
+                        
+                        <div class="form-control w-full mb-4">
+                            <label class="label">
+                                <span class="label-text">Prénom</span>
+                            </label>
+                            <input type="text" id="firstname" placeholder="Votre prénom" class="input input-bordered w-full" />
+                        </div>
+                        
+                        <div class="form-control w-full mb-6">
+                            <label class="label">
+                                <span class="label-text">Êtes-vous membre de l'EPITA ?</span>
+                            </label>
+                            <select id="epita-member" class="select select-bordered w-full">
+                                <option value="" disabled selected>Sélectionner une réponse</option>
+                                <option value="yes">Oui</option>
+                                <option value="no">Non</option>
+                            </select>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button id="submit-btn" class="btn btn-primary">Accéder au contact</button>
+                        </div>
+                    </div>
+                    
+                    <div id="contact-info" class="hidden">
+                        <div id="epita-yes" class="hidden">
+                            <div class="alert alert-success mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Vous pouvez me contacter via les informations ci-dessous</span>
+                            </div>
+                            
+                            <div class="card bg-base-100 shadow-md p-4 mb-4">
+                                <h3 class="text-lg font-bold mb-2">Mes coordonnées</h3>
+                                <p class="mb-2"><strong>Email:</strong> placeholder@null.fr</p>
+                                <p><strong>Téléphone:</strong> 06 12 34 56 78</p>
+                            </div>
+                            
+                            <div class="text-center mt-6">
+                                <a href="mailto:placeholder@null.fr" class="btn btn-primary">
+                                    Envoyer un mail
+                                </a>
+                                <button id="back-btn-yes" class="btn btn-ghost mt-4 w-full">Retour au formulaire</button>
+                            </div>
+                        </div>
+                        
+                        <div id="epita-no" class="hidden">
+                            <div class="alert alert-error mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Vous ne pouvez pas me contacter pour le moment.</span>
+                            </div>
+                            
+                            <div class="text-center mt-6">
+                                <button id="back-btn-no" class="btn btn-ghost w-full">Retour au formulaire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer footer-center p-10 bg-neutral text-neutral-content">
+        <div class="grid grid-flow-col gap-4">
+            <a href="placeholder.mp4" class="link link-hover">À propos</a>
+            <a href="contact.html" class="link link-hover">Contact</a>
+            <a href="placeholder.mp4" class="link link-hover">Mentions légales</a>
+            <a href="placeholder.mp4" class="link link-hover">Confidentialité</a>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a href="placeholder.mp4" class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+                <a href="placeholder.mp4" class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+                <a href="placeholder.mp4" class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+            </div>
+        </div>
+        <div>
+            <p>Copyright © 2024 EPITA GS - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const submitBtn = document.getElementById('submit-btn');
+            const contactForm = document.getElementById('contact-form');
+            const contactInfo = document.getElementById('contact-info');
+            const epitaYes = document.getElementById('epita-yes');
+            const epitaNo = document.getElementById('epita-no');
+            const backBtnYes = document.getElementById('back-btn-yes');
+            const backBtnNo = document.getElementById('back-btn-no');
+            
+            submitBtn.addEventListener('click', function() {
+                const epitaMember = document.getElementById('epita-member').value;
+                const lastName = document.getElementById('lastname').value;
+                const firstName = document.getElementById('firstname').value;
+                if (!lastName || !firstName || !epitaMember) {
+                    alert('Veuillez remplir tous les champs');
+                    return;
+                }
+                
+                contactForm.classList.add('hidden');
+                contactInfo.classList.remove('hidden');
+                
+                if (epitaMember === 'yes') {
+                    epitaYes.classList.remove('hidden');
+                    epitaNo.classList.add('hidden');
+                } else {
+                    epitaYes.classList.add('hidden');
+                    epitaNo.classList.remove('hidden');
+                }
+            });
+            
+            backBtnYes.addEventListener('click', resetForm);
+            backBtnNo.addEventListener('click', resetForm);
+            
+            function resetForm() {
+                contactInfo.classList.add('hidden');
+                epitaYes.classList.add('hidden');
+                epitaNo.classList.add('hidden');
+                contactForm.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+
