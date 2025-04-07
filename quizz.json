@@ -1,0 +1,52 @@
+[
+    {
+        "question": "Quelle est la capitale de la France ?",
+        "options": [
+            "Londres",
+            "Berlin",
+            "Paris",
+            "Madrid"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Quel est le langage de programmation le plus utilisé pour le développement web côté client ?",
+        "options": [
+            "Java",
+            "Python",
+            "C++",
+            "JavaScript"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Quelle est la planète la plus proche du soleil ?",
+        "options": [
+            "Vénus",
+            "Terre",
+            "Mars",
+            "Mercure"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Qui a peint la Joconde ?",
+        "options": [
+            "Vincent van Gogh",
+            "Pablo Picasso",
+            "Leonardo da Vinci",
+            "Claude Monet"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+        "options": [
+            "Oxygène",
+            "Hydrogène",
+            "Carbone",
+            "Hélium"
+        ],
+        "answer": 1
+    }
+]
